@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Form component'i, ürünleri kategoriye göre filtreleme işlevselliğini içerir.
 const Form = ({ categoryItem, filterItems, showAllItems }) => {

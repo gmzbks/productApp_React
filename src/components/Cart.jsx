@@ -34,7 +34,6 @@ const Cart = ({ cartItems, setCart, onShowCart }) => {
         <p>Continue Shopping</p>
         <span><FaArrowRight /></span>
       </div>
-
       {/* Sepet içindeki her bir ürünün listesi */}
       {cartItems.map((item) => (
         item && (
@@ -55,8 +54,7 @@ const Cart = ({ cartItems, setCart, onShowCart }) => {
                 <button
                   className='delete-button'
                   onClick={() => handleDelete(item.id)}
-                >
-                  Delete
+                  > Delete
                 </button>
               </div>
             </div>

@@ -12,7 +12,6 @@ const Card = ({ itemid, image, category, price, title, onAddToCart, product }) =
         <h4>{category}</h4>
         <div className="line"></div>
         <h3>${price}</h3>
-
       </div>
       <div className="add-button">
         {/* Sepete ekle butonu */}

@@ -10,7 +10,6 @@ body {
   display: flex;
   padding: 20px;
   overflow: hidden;
-
   @media screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -19,7 +18,6 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-
 }
 
 .navi {
@@ -46,9 +44,7 @@ body {
     .search-container {
       margin: 0;
       padding: 0;
-
     }
-
     input {
       width: 40vh;
       background-color: $secondary-color;
@@ -57,17 +53,18 @@ body {
       border: 1px solid $primary-color;
       padding-left: 7vh;
       margin: 0;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        width: 100%;
+      }
     }
-
     .search-icon {
       margin: 2vh;
 
       display: flex;
       justify-content: center;
       align-items: center;
-
     }
-
     .icon-search {
       position: relative;
       left: 5vh;
@@ -96,10 +93,7 @@ body {
     align-items: center;
     margin: 20px;
   }
-
 }
-
-
 .category-filter {
   position: fixed;
   top: 0;
@@ -109,10 +103,7 @@ body {
   background-color: $secondary-color;
   z-index: 2;
   margin-left: 20px;
-
-
 }
-
 .category-list {
   border: 1px solid $primary-color;
   margin-top: 154px;
@@ -134,13 +125,8 @@ body {
       background-color: $primary-color;
     }
   }
-
-
-
-
 }
 
-// }
 .cardlist-cart-show {
   margin-right: 20px;
 }
@@ -156,12 +142,8 @@ body {
 
   @media screen and (max-width: 768px) {
     margin-left: 255rem;
-
-
-
+    margin-top:8.5rem;
   }
-
-
   img {
     width: 200px;
     height: 180px;
@@ -204,7 +186,6 @@ body {
     .card-details {
       align-items: center;
     }
-
     .add-button {
       margin-top: auto;
       padding: 5px 10px;
@@ -228,6 +209,12 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 60rem;
+    margin-top: 10rem;
+    margin-right:20rem;
+  }
 }
 
 .cart-click {
