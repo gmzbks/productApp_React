@@ -1,0 +1,299 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 20px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.navi {
+  border: 1px solid $primary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $secondary-color;
+  z-index: 1000;
+  margin: 30px;
+
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    .search-container {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    input {
+      width: 40vh;
+      background-color: $secondary-color;
+      height: 4vh;
+      border-radius: 10vh;
+      border: 1px solid $primary-color;
+      padding-left: 7vh;
+      margin: 0;
+    }
+
+    .search-icon {
+      margin: 2vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .icon-search {
+      position: relative;
+      left: 5vh;
+      color: grey;
+    }
+
+    .cart-icon {
+      margin-left: auto;
+      margin-right: 40px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+    }
+  }
+}
+
+.form {
+  display: flex;
+  margin: 10rem;
+  overflow-y: auto;
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+}
+
+
+.category-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  background-color: $secondary-color;
+  z-index: 2;
+  margin-left: 20px;
+
+
+}
+
+.category-list {
+  border: 1px solid $primary-color;
+  margin-top: 154px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .filter {
+    margin: 20px;
+    margin-bottom: 60px;
+    margin-top: 63px;
+    padding: 5px;
+    list-style-type: none;
+    border: 2px solid $primary-color;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+
+
+
+}
+
+// }
+.cardlist-cart-show {
+  margin-right: 20px;
+}
+
+.product-list {
+  flex-grow: 1;
+  margin-left: 150px;
+  margin-right: 350rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $primary-color;
+  padding: 5px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 255rem;
+
+
+
+  }
+
+
+  img {
+    width: 200px;
+    height: 180px;
+    padding: 0.2rem;
+    margin: 2.2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carditem {
+    border: 1px solid $primary-color;
+    margin: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h4 {
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    .line {
+      background-color: $primary-color;
+      height: 1%;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    h3 {
+      display: block;
+      margin-left: 160px;
+      padding: 20px;
+    }
+
+    .card-details {
+      align-items: center;
+    }
+
+    .add-button {
+      margin-top: auto;
+      padding: 5px 10px;
+
+      button {
+        cursor: pointer;
+
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.cart-box {
+
+  flex-grow: 1;
+  margin-left: 150px;
+  margin-right: 350rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.cart-click {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $cart-color;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+  p {
+    margin-right: 10px;
+
+  }
+
+  span {
+    font-size: 1.9em;
+
+  }
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 40px;
+  border: 1px solid $cart-color;
+  border-radius: 5px;
+  margin: 20px;
+  height: 500px;
+
+  &:hover {
+    background-color: $active-color;
+  }
+
+  img {
+    max-width: 80px;
+    margin-right: 10px;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $price-color;
+  }
+
+  .delete-button {
+    cursor: pointer;
+    background-color: $delete-color;
+    color: $secondary-color;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+
+    &:hover {
+      background-color: $cart-color;
+    }
+  }
+}
